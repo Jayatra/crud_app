@@ -13,7 +13,7 @@ const app = express();
 dotenv.config({path:'config.env'})
 const PORT = process.env.PORT||8080;
 
-//lod requests
+//load requests
 app.use(morgan('tiny'));
 
 
@@ -26,7 +26,7 @@ app.use(bodyparser.urlencoded({extended:true}))
 //set view engine
 app.set('view engine','ejs')
 
-//laod assets
+//load assets
 app.use('/css',express.static(path.resolve(__dirname,'assets/css')))
 app.use('/img',express.static(path.resolve(__dirname,'assets/img')))
 app.use('/js',express.static(path.resolve(__dirname,'assets/js')))
